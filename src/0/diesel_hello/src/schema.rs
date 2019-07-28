@@ -1,9 +1,9 @@
 table! {
     posts (id) {
-        id -> Nullable<Integer>,
+        id -> Integer,
         title -> Text,
         body -> Text,
-        is_published -> Text,
-        published -> Nullable<Text>,
+        is_published -> Bool,
+        published -> chrono::DateTime<chrono::Local>,
     }
 }
