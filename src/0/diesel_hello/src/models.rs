@@ -5,7 +5,7 @@ pub struct Post {
     pub title: String,
     pub body: String,
     pub is_published: bool,
-    pub published: chrono::DateTime<chrono::Local>,
+    pub published: Option<chrono::NaiveDateTime>,
 }
 #[derive(Insertable)]
 #[table_name = "posts"]
